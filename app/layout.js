@@ -2,8 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { AuthProvider } from "./AuthProvider";
-import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
-import {LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
+import NavbarServer from "@/fatching/NavbarServer";
 
 
 const geistSans = Geist({
@@ -29,12 +28,14 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <nav className="bg-green-500">
-            <ul className="flex justify-center py-3 space-x-4">
-              <li><Link href="/">home</Link></li>
-              <li><Link href="/profile">profile</Link></li>
-              <li><LoginLink>Sign in</LoginLink></li>
-              <li><RegisterLink>Sign up</RegisterLink></li>
-              <li><LogoutLink>Log out</LogoutLink></li>
+            <ul className="flex justify-between py-3 gap-4 w-11/12 mx-auto">
+              <div className="flex gap-3">
+                <li><Link href="/">home</Link></li>
+                <li><Link href="/profile">profile</Link></li>
+              </div>
+              <div>
+                <NavbarServer></NavbarServer>
+              </div>
             </ul>
           </nav>
           {children}
