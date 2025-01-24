@@ -7,9 +7,9 @@ const NavbarServer = async () => {
     const isUserAuthenticated = await isAuthenticated();
 
 
-    const loginLink = (<li className="list-none"><LoginLink>Sign in</LoginLink></li>);
-    const registerLink = (<li className="list-none"><RegisterLink>Sign up</RegisterLink></li>);
-    const logoutLink = (<li className="list-none"><LogoutLink>Log out</LogoutLink></li>);
+    const loginLink = (<li className="font-semibold"><LoginLink>Sign in</LoginLink></li>);
+    const registerLink = (<li className="font-semibold"><RegisterLink>Sign up</RegisterLink></li>);
+    const logoutLink = (<li className="font-semibold"><LogoutLink>Log out</LogoutLink></li>);
 
     return (
         <LinkWala

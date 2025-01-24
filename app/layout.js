@@ -23,15 +23,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <AuthProvider>
-      <html lang="en">
+      <html lang="en" data-theme="light">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <nav className="bg-green-500">
             <ul className="flex justify-between py-3 gap-4 w-11/12 mx-auto">
               <div className="flex gap-3">
-                <li><Link href="/">home</Link></li>
-                <li><Link href="/profile">profile</Link></li>
+                <li><Link href="/" className="font-semibold">Home</Link></li>
+                <li><Link href="/profile" className="font-semibold">Profile</Link></li>
               </div>
               <div>
                 <NavbarServer></NavbarServer>
